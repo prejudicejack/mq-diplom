@@ -1,4 +1,22 @@
 h1 {
 	color: red;
-	border: 1px solid green;
+	border: 1px solid red;
+}
+
+.content1 {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+
+.content2 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+
+.content3 {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
 }
