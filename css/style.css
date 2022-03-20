@@ -253,9 +253,15 @@
   margin-top: 5.5rem;
 }
 
+.post-image {
+  min-width: 381px;
+}
+
 .post-image img {
   display: block;
-  width: 381px;
+  min-width: 100%;
+  height: auto;
+  background-color: #eff6f1;
 }
   
 .post-content {
@@ -574,16 +580,19 @@ p {
 .product-post {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .product-post-image {
   display: block;
-  margin:  auto;
+  margin-left: 2.2rem;
+  margin-right: 2.2rem;
+  background-color: #eff6f1;
 }
 
-.product-post-image img {
-  max-width: 100%;
-  padding: 0 2.2rem;
+.product-post-image img, .product-post-image source {
+  width: 100%;
+  min-height: 20.4rem;
 }
 
 .product-content {
@@ -593,8 +602,7 @@ p {
   width:  34.7rem;
   min-height: 26.7rem;
   margin-top: -3rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding: 2rem;
   border: 0.3rem solid #b59f5b;
 }
 
@@ -781,14 +789,19 @@ p {
   }
 
   .header-menu {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     width: 100%;
+    margin-top: -3.5rem;
+    padding-right: 0.4rem;
   }
 
   .menu-button {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
   }
 
   .header-logo {
@@ -816,13 +829,21 @@ p {
   }
 
   .posts {
-    min-width: 263px;
     width: calc(100% - 301px);
   }
 
   .post {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .post-image {
+    min-width: 28.2rem;
+    width: 100%;
+    height: auto;
+    background-color: #eff6f1;
   }
 
   .post-image img{
@@ -852,7 +873,7 @@ p {
   }
 
   .products {
-    width: calc(100% - 7rem);
+    max-width: 100%;
     padding-left: 3.5rem;
     padding-right: 3.5rem;
   }
@@ -865,6 +886,10 @@ p {
 
   .product-post {
     width: calc(50% - 3.5rem);
+  }
+
+  .product-post-image img, .product-post-image source {
+    min-height: 22.7rem;
   }
 
   .product-post:nth-child(even) {
@@ -932,8 +957,9 @@ p {
 
  @media (max-width: 640px) {
   .header {
-    padding-top: 35rem;
+    padding-top: 28rem;
     padding-bottom: 22.5rem;
+    min-width: 27rem;
   }
 
   .container {
@@ -946,14 +972,15 @@ p {
   }
 
   .header-menu {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
     width: 100%;
-  }
-
-  .menu-button {
-    margin-top: -31rem;
+    margin-top: -24rem;
+    padding-right: 2.5rem;
   }
 
   .header-logo {
@@ -984,10 +1011,17 @@ p {
   .post {
     display: flex;
     flex-wrap: wrap;
+    min-width: 25.5rem;
   }
 
-  .post-image img {
+  .post-image {
+    min-width: 25.5rem;
     width: 100%;
+    height: auto;
+  }
+
+  .post-image img{
+    max-width: 100%;
   }
 
   .post-content {
@@ -1022,7 +1056,7 @@ p {
   }
 
   .products {
-    width: calc(100% - 3rem);
+    max-width: 100%;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -1035,6 +1069,10 @@ p {
 
   .product-post {
     width: 100%;
+  }
+
+  .product-post-image img, .product-post-image source {
+    min-height: 28.5rem;
   }
 
   .product-post:nth-child(2), .product-post:nth-child(3) {
@@ -1188,8 +1226,8 @@ p {
   -moz-appearance: none;
   background-image: url(../svg/form-arrows.svg);
   background-repeat: no-repeat;
-  background-position: right 1.5rem/*15px*/ center;
-  background-size: 0.7rem 1.5rem/*7px 15px*/;
+  background-position: right 1.5rem center;
+  background-size: 0.7rem 1.5rem;
   background-color: #f4f7f6;
 }
 
