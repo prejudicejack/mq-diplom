@@ -598,11 +598,12 @@ p {
 .product-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width:  34.7rem;
+  height: 100%;
   min-height: 26.7rem;
   margin-top: -3rem;
-  padding: 2rem;
+  padding: 5.6rem 2rem 2rem 2rem;
   border: 0.3rem solid #b59f5b;
 }
 
@@ -706,13 +707,13 @@ p {
   background-image: url(../svg/001-pinterest.svg);
 }
 
-.widget-link-facebook {
+/*.widget-link-facebook {
   background-image: url(../svg/002-facebook-logo.svg);
 }
 
 .widget-link-instagram {
   background-image: url(../svg/005-instagram.svg);
-}
+}*/
 
 .widget-link-tumblr {
   background-image: url(../svg/003-tumblr.svg);
